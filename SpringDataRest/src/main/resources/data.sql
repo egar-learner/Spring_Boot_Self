@@ -1,0 +1,5 @@
+insert into Alien values (102,'Manish','Java')
+insert into Alien values (103,'Manish2','Java2')
+insert into Alien values (104,'Manish3','Java3')
+insert into Alien values (105,'Manish4','Java5')
+insert into Alien values (106,'Manish5','Java7')
