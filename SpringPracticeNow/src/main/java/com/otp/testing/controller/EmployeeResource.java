@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.otp.testing.exception.OTPException;
 import com.otp.testing.model.Employee;
 import com.otp.testing.service.EmployeeService;
 
@@ -28,6 +29,11 @@ public class EmployeeResource {
 	@Autowired
 	public EmployeeResource(EmployeeService employeeService) {
 		this.employeeService = employeeService;
+	}
+	
+	@GetMapping("/checkException")
+	public ResponseEntity<Object> checkIfCustomExceptionWorkingWell(){
+		throw new OTPException("This is a test message, Can you see it??");
 	}
 	
 	@GetMapping
